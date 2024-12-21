@@ -14,17 +14,12 @@ The goal is to have a minimally functional libc with features such as string man
 
 The implementation of mini-libc will be **freestanding**, i.e. it will not use any outside library calls.
 It will be implemented on top of the system call interface provided by Linux on an `x86_64` architecture.
-Any function you require, that is typically part of libc, you will have to implement.
-You can reuse functions that you implement in other parts of the mini-libc.
-
-In case you are using a macOS device with ARM64 / Aarch64, you will have to install an `x86_64` virtual machine.
 
 ## Support Code
 
 The support code consists of three directories:
 
 - `src/` is the skeleton mini-libc implementation.
-  You will have to implement missing parts marked as `TODO` items.
 
 - `samples/` stores use cases and tests of mini-libc.
 
@@ -42,15 +37,15 @@ For your minimal implementation, the following header files are of interest:
 
 - `<string.h>`: defines string-handling functions
 
-  For this assignment, you will have to implement the following functions: `strcpy()`, `strcat()`, `strlen()`, `strncpy()`, `strncat()`, `strcmp()`, `strncmp()`, `strstr()`, `strrstr()`, `memcpy()`, `memset()`, `memmove()`, `memcmp()`.
+  For this assignment, I had to implement the following functions: `strcpy()`, `strcat()`, `strlen()`, `strncpy()`, `strncat()`, `strcmp()`, `strncmp()`, `strstr()`, `strrstr()`, `memcpy()`, `memset()`, `memmove()`, `memcmp()`.
 
 - `<stdio.h>`: defines printing and I/O functions
 
-  For this assignment, you will have to implement `puts()`.
+  For this assignment, I had to implement `puts()`.
 
 - `<unistd.h>`, `<sys/fcntl.h>` and `<sys/stat.h>`: define I/O primitives
 
-  For this assignment, you will have to implement the following functions: `open()`, `close()`, `lseek()`, `stat()`, `fstat()`, `truncate()`, `ftruncate()`.
+  For this assignment, I had to implement the following functions: `open()`, `close()`, `lseek()`, `stat()`, `fstat()`, `truncate()`, `ftruncate()`.
 
   You will also have to implement the `nanosleep()` and `sleep()` functions.
 
