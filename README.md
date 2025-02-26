@@ -66,8 +66,6 @@ You will have to add the missing features to make those tests compile, that is
 - the declaration and the implementation of `nanosleep()` and `sleep()`
 - the update of the libc `Makefile` to build the source code files implementing `puts()`, `nanosleep()` and `sleep()`
 
-  :exclamation::exclamation: **Pay attention** to which functions have to modify the `errno` variable.
-
 ### Building mini-libc
 
 To build mini-libc, run `make` in the `src/` directory:
